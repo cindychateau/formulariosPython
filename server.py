@@ -17,12 +17,20 @@ def crea_user():
     session['usuario'] = request.form['nombre'] #Está obteniendo desde atributo NAME de mi input
     session['email'] = request.form['email']
 
-    #Usamos redirect para evitar el reenvío del formulario
-    return redirect('/procesado')
+    if request.form['accion'] == "inicioSesion":
+        #Usamos redirect para evitar el reenvío del formulario
+        return redirect('/procesado')
+    else:
+        #Usamos redirect para evitar el reenvío del formulario
+        return redirect('/registro')
 
 @app.route("/procesado")
 def procesado():
     return render_template("procesado.html")
+
+@app.route("/registro")
+def registro():
+    return render_template("registro.html")
     
 
 if __name__ == "__main__":

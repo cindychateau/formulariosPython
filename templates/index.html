@@ -20,10 +20,24 @@
             <label for="email">Correo Electrónico</label>
             <input type="email" name="email" id="email">
         </div>
+        <input type="hidden" name="accion" value="inicioSesion">
         <input type="submit" value="Enviar">
     </form>
-
-    <input type=”text” name=”nombre” id=”name” for=”nm”>
+    <hr>
+    <form action="/success" method="POST">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <!--ID se relaciona con el FOR del LABEL -->
+            <!--NAME se relaciona con el proceso del formulario -->
+        </div>
+        <div>
+            <label for="email">Correo Electrónico</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <input type="hidden" name="accion" value="registro">
+        <input type="submit" value="Enviar">
+    </form>
 
 </body>
 </html>
